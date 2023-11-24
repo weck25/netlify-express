@@ -7,6 +7,10 @@
     "build": "netlify-lambda build express",
     "start": "nodemon server-local.js"
   },
+  "engines": {
+    "node": "16.x"
+  },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
