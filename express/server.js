@@ -1,8 +1,8 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+const serverless = require('serverless-http');
 const app = express();
-import serverless from "serverless-http";
 
 app.use(cors());
 
@@ -17,8 +17,4 @@ app.get('/api/query', async (req, res) => {
     }
 });
 
-const PORT = 3001; // Gunakan port yang sesuai
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
-export const handler = serverless(app);
+module.exports.handler = serverless(app);
