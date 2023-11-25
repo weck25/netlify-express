@@ -3,7 +3,6 @@ const axios = require('axios');
 const cors = require('cors');
 const app = express();
 
-
 app.use(cors());
 
 app.get('/api/query', async (req, res) => {
@@ -17,7 +16,4 @@ app.get('/api/query', async (req, res) => {
     }
 });
 
-const PORT = 3001; // Gunakan port yang sesuai
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+module.exports = app;
