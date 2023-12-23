@@ -8,7 +8,7 @@ app.use(cors());
 app.get('/api/query', async (req, res) => {
     const walletAddress = req.query.wallet;
     try {
-        const response = await axios.get(`https://www.innersphere.io/api/query?wallet=${walletAddress}`);
+        const response = await axios.get(`https://airdrop-api.jup.ag/allocation/${walletAddress}`);
         res.json(response.data);
     } catch (error) {
         console.error('Error in proxy server:', error);
